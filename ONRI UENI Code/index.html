@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ONRÍ Executive Leadership Program — Certificate Course</title>
+<meta name="description" content="ONRÍ Executive Leadership Program — Technical School–Accredited Certificate Course (6-Week Intensive)." />
+
+<style>
+:root{
+  --text-light: rgba(255,255,255,.92);
+  --text-muted: rgba(255,255,255,.72);
+  --border: rgba(255,255,255,.12);
+
+  --gold-main: #d7b56d;
+  --gold-deep: #b98b3f;
+  --gold-glow: rgba(215,181,109,.22);
+
+  --radius: 14px;
+  --max-width: 1100px;
+  --section-gap: 28px;
+
+  --accent-gradient: linear-gradient(135deg, rgba(215,181,109,.95), rgba(185,139,63,.92));
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background:
+    radial-gradient(1100px 520px at 18% 12%,rgba(215,181,109,.12),transparent 55%),
+    radial-gradient(900px 460px at 82% 26%,rgba(141,86,255,.10),transparent 58%),
+    linear-gradient(180deg,#06060a,#0b0b10 40%,#07070b);
+  color: var(--text-light);
+  line-height: 1.57;
+  letter-spacing: .4px;
+}
+
+a{ text-decoration:none; color:inherit; }
+
+.wrap{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--section-gap) 18px 60px;
+}
+
+h1,h2,h3{ margin:0; font-weight:600; }
+
+h1{
+  font-size: clamp(28px, 5vw, 48px);
+  letter-spacing: .3px;
+  color: var(--text-light);
+}
+
+h2{
+  font-size: 22px;
+  color: var(--gold-main);
+  margin-bottom: 12px;
+}
+
+h3{
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+p{ margin:0 0 12px; }
+
+/* HERO */
+.hero{
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.10);
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0,0,0,.40);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(900px 420px at 25% 15%,rgba(215,181,109,.16),transparent 55%),
+    radial-gradient(800px 380px at 80% 40%,rgba(106,58,255,.14),transparent 60%);
+  pointer-events:none;
+}
+
+.hero > *{ position:relative; z-index:1; }
+
+.hero img{
+  width: 200px;px;
+  margin-bottom:14px;
+  object-fit:contain;
+  border-radius:16px;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,.55));
+}
+
+.hero .sub{
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  padding:10px 15px;
+  border-radius:999px;
+  font-weight:650;
+  cursor:pointer;
+  transition:.2s ease;
+  border:1px solid rgba(255,255,255,.14);
+  letter-spacing:.4px;
+}
+
+.btn.primary{
+  background: var(--accent-gradient);
+  color:#120e07;
+  border-color: rgba(215,181,109,.60);
+  box-shadow: 0 4px 18px var(--gold-glow);
+}
+
+.btn.secondary{
+  background: rgba(255,255,255,.06);
+  color:#fff;
+  border-color: rgba(255,255,255,.16);
+}
+
+.btn.primary:hover,
+.btn.secondary:hover{
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+/* SECTIONS */
+.section{
+  margin-top: var(--section-gap);
+  padding: 18px 0;
+}
+
+/* CARDS */
+.card{
+  background: var(--card-bg);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:16px 18px;
+  margin-bottom: var(--section-gap);
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+/* DETAILS */
+.details .row{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.label{
+  font-size:14px;
+  color: rgba(255,255,255,.62);
+}
+
+.value{
+  font-size:15px;
+  color: var(--text-light);
+  font-weight:650;
+}
+
+ul{ padding-left:18px; color:rgba(255,255,255,.82); }
+li{ margin-bottom:6px; }
+
+/* FRAMEWORK */
+.framework{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:12px;
+  margin-top:10px;
+}
+
+.framework .fitem{
+  background:rgba(255,255,255,.05);
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.12);
+  padding:10px;
+  text-align:center;
+}
+
+.framework .fitem b{
+  display:block;
+  margin-bottom:6px;
+  color: var(--gold-main);
+}
+
+.framework .fitem span{
+  color:rgba(255,255,255,.86);
+  font-size:14px;
+}
+
+/* TIMELINE */
+.timeline .week{
+  margin-bottom:12px;
+  border-left:3px solid var(--gold-main);
+  padding-left:12px;
+}
+
+.timeline .wtitle{
+  font-weight:700;
+  color:var(--text-light);
+  font-size:15px;
+}
+
+.meta{
+  font-size:14px;
+  color:rgba(255,255,255,.86);
+  margin-top:6px;
+}
+
+/* FOOTER */
+.banner{
+  background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.10);
+  padding:16px 18px;
+  border-radius:var(--radius);
+  text-align:center;
+  color:var(--text-light);
+  font-weight:600;
+  margin-top:22px;
+}
+
+.banner .motto{
+  margin-top:6px;
+  font-size:16px;
+  color:rgba(215,181,109,.85);
+  font-weight:700;
+  letter-spacing:1.2px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<section class="hero">
+<img src="https://our.uenicdn.com/cdn-cgi/image/width=200,fit=crop,f=auto/image/upload/v1769875603/business/78153cac-a2a1-4ecf-8830-4bcebc0f33ed.png" alt="ONRÍ Elevation Initiative Seal">
+<h1>ONRÍ Executive Leadership Program</h1>
+<p class="sub">Technical School–Accredited Certificate Course • 6-Week Intensive</p>
+
+<div>
+<a class="btn primary" href="#program-details">Program Details</a>
+<a class="btn secondary" href="#schedule">Course Schedule</a>
+</div>
+</section>
+
+<section class="section" id="program-details">
+<div class="card">
+<h2>Program Details</h2>
+
+<div class="details">
+<div class="row"><div class="label">Program Title</div><div class="value">ONRÍ Executives Leadership Certificate</div></div>
+<div class="row"><div class="label">Credential Awarded</div><div class="value">Technical Certificate in Executive Leadership & Applied Mentorship</div></div>
+<div class="row"><div class="label">Program Length</div><div class="value">6 Weeks (Accelerated)</div></div>
+<div class="row"><div class="label">Contact Hours</div><div class="value">36 Instructional Hours</div></div>
+<div class="row"><div class="label">Session Length</div><div class="value">2 sessions/week (90 min each)</div></div>
+<div class="row"><div class="label">Delivery Format</div><div class="value">Hybrid (In-Person / Virtual)</div></div>
+<div class="row"><div class="label">Cohort Size</div><div class="value">10–20 Participants</div></div>
+<div class="row"><div class="label">CEU Equivalent</div><div class="value">~3.6 CEUs</div></div>
+<div class="row"><div class="label">Issuing Body</div><div class="value">Technical School + ONRÍ Elevation Initiative Inc.</div></div>
+</div>
+
+<h3>Program Overview</h3>
+<p>This accelerated course delivers applied leadership training, ethical decision-making, executive presence development, and resilience-based performance strategies aligned with workforce standards.</p>
+
+<h3>Program Learning Outcomes</h3>
+<p>Graduates will demonstrate ownership of decisions, communicate with executive presence, lead ethically under pressure, resolve conflict professionally, apply structured decision-making, model integrity and resilience, and execute leadership responsibilities in real-world environments.</p>
+
+<h3>Core Leadership Framework (ONRÍ Model)</h3>
+<div class="framework">
+<div class="fitem"><b>Ownership</b><span>Full accountability and results ownership</span></div>
+<div class="fitem"><b>Nobility</b><span>Professional dignity and principled leadership</span></div>
+<div class="fitem"><b>Resilience</b><span>High performance under adversity</span></div>
+<div class="fitem"><b>Integrity</b><span>Ethical consistency in all decision-making</span></div>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="schedule">
+<div class="card">
+<h2>6-Week Course Schedule</h2>
+
+<div class="timeline">
+<div class="week"><div class="wtitle">Week 1 — Ownership & Identity</div><p class="meta"><b>Focus:</b> Responsibility and leadership identity</p></div>
+<div class="week"><div class="wtitle">Week 2 — Executive Presence & Communication</div><p class="meta"><b>Focus:</b> Executive conduct and professional restraint</p></div>
+<div class="week"><div class="wtitle">Week 3 — Ethics & Decision-Making</div><p class="meta"><b>Focus:</b> Principles under pressure</p></div>
+<div class="week"><div class="wtitle">Week 4 — Resilience & Failure Recovery</div><p class="meta"><b>Focus:</b> Adversity performance planning</p></div>
+<div class="week"><div class="wtitle">Week 5 — Conflict Resolution & Professional Leadership</div><p class="meta"><b>Focus:</b> Professional standards leadership</p></div>
+<div class="week"><div class="wtitle">Week 6 — Legacy & Final Evaluation</div><p class="meta"><b>Deliverables:</b> Leadership plan & final presentation</p></div>
+</div>
+
+</div>
+</section>
+
+<section class="banner">
+<h2>ONRÍ Elevation Initiative Inc.</h2>
+<p class="motto">Technical Leadership Certificate Program · ELEVATE ALWAYS.</p>
+</section>
+
+</div>
+</body>
+</html>
+
